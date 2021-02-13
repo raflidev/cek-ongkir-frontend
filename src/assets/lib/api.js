@@ -1,8 +1,23 @@
 import axios from 'axios';
 
-async function getApi() {
-   const { data } = await axios.get("https://api.rajaongkir.com/starter/province?key=7e7dfdc38dd2361f1c1cbadaa1dd68b5")
-   console.log(data);
+async function getProvinsi() {
+   const { data } = await axios.get("https://cekongkirlah.herokuapp.com/api/province")
+   return data
 }
 
-export { getApi }
+async function getCity() {
+   const { data } = await axios.get("https://cekongkirlah.herokuapp.com/api/city")
+   return data
+}
+
+async function getCityID(id) {
+   const { data } = await axios.get(`https://cekongkirlah.herokuapp.com/api/city/${id}`)
+   return data
+}
+
+async function getOngkir(o, d, w, c) {
+   const { data } = await axios.get(`https://cekongkirlah.herokuapp.com/api/cost/${o}/${d}/${w}/${c}`)
+   return data
+}
+
+export { getProvinsi, getCity, getCityID, getOngkir }
