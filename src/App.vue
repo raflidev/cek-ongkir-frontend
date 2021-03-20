@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div class="text-white py-3 bg-red-500">
+    <!-- <div class="text-white py-3 bg-red-500">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
     <router-view/>
   </div>
 </template>

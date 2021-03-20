@@ -1,7 +1,7 @@
 <template>
   <div>
-     <div class="grid grid-rows-6 grid-flow-col gap-4 bg-blue-500">
-      <div class="row-span-6">
+     <div class="w-screen h-full bg-red-400 ">
+      <div class="flex w-screen h-screen">
          <div>
          <label for="provinsi">Dari</label>
          </div>
