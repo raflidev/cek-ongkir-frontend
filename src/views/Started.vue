@@ -11,11 +11,11 @@
                     <h2 class="font-medium text-2xl mt-4">
                         Cek harga di wilayahmu sekarang!
                     </h2>
-                    <button class="uppercase bg-blue-600 text-white hover:bg-blue-400 hover:text-black rounded px-10 mt-4 py-2">
                       <router-link to="/">
+                    <button class="uppercase bg-blue-600 text-white hover:bg-blue-400 hover:text-black rounded px-10 mt-4 py-2">
                       cek
-                      </router-link>
                     </button>
+                      </router-link>
                   </div>
               </div>
 
@@ -32,7 +32,12 @@
 
 <script>
 export default {
-name:"Started"
+name:"Started",
+created(){
+    if (localStorage.getItem("started") == null) {
+        localStorage.setItem("started", "ok")
+    }
+  },
 }
 </script>
 

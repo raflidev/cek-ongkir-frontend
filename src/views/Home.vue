@@ -88,7 +88,6 @@
             </div>
          </div>
          <div class="w-3/2" v-if="city_id != null && destination != null && weight != null && courier != null">
-         <span>{{ongkir}}</span>
          <div class="flex justify-center h-screen items-center">
              <div class="bg-gray-100 w-96 h-1/2 rounded-md">
                  <div class="flex justify-center min-h-full items-center">
@@ -151,6 +150,11 @@ export default {
 
       loading: false
     } 
+  },
+  created(){
+      if (localStorage.getItem("started") == null) {
+          this.$router.push("started")
+      }
   },
   async mounted(){
     this.loading = true
