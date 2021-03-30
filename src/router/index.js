@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 
 import Home from "../views/Home"
 import Started from "../views/Started"
-import Home2 from "../views/Home2"
 
 Vue.use(VueRouter)
 
@@ -18,11 +17,6 @@ const routes = [
       name: Started,
       component: Started
    },
-   {
-      path: '/a',
-      name: Home2,
-      component: Home2
-   }
 ]
 
 const router = new VueRouter({

@@ -83,7 +83,6 @@
                             
                         </div>
                     </div>
-                    
                 </div>          
             </div>
          </div>
@@ -108,7 +107,7 @@
                             <h1 class="w-1/2 font-medium">Kurir</h1>
                             <span class="w-1/2">{{ongkir.result[0].code.toUpperCase()}}</span>
                         </div>
-                        <div class="flex" v-if="ongkir.result[0].costs != []">
+                        <div class="flex" v-if="ongkir != null && ongkir.result[0].costs.length > 0">
                             <h1 class="w-1/2 font-medium">Total</h1>
                             <span class="w-1/2">Rp.{{ongkir.result[0].costs[0].cost[0].value}}</span>
                         </div>
